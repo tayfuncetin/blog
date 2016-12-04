@@ -1,8 +1,8 @@
 # Site settings
 title: 'Safa Tayfun Çetin'
 description: 'The world of an engineer!'
-url: 'http://tayfuncetin.github.io/blog'
-baseurl: '/blog/'
+url: 'http://tayfuncetin.pro'
+baseurl: '/'
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
 
