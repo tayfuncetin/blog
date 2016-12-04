@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="{{ page.date | date: "%-d %b %Y" }}" class="post-meta__date date">{{ page.date | date: "%-d %b %Y" }}</time> &#8226; <span class="post-meta__tags">on {% for tag in page.tags %}<a href="{{ site.baseurl }}tags/#{{ tag }}">{{ tag }}</a> {% endfor %}</span>
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <section class="post">
+    {{ content }}
+  </section>
+  
+<hr class="share-divider">
+<a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url}}"  title="Share on Facebook" target="_blank"><i class="icon icon-social-facebook medium-icon"></i></a>
+<a href="https://twitter.com/home?status=Check this out: {{ site.url }}{{ page.url}}"  title="Share on Twitter" target="_blank"><i class="icon icon-social-twitter medium-icon"></i></a>
+<a href="https://plus.google.com/share?url={{ site.url }}{{ page.url}}"  title="Share on Google+" target="_blank"><i class="icon icon-social-google-plus medium-icon"></i></a>
+<a href="http://www.reddit.com/submit?url={{ site.url }}{{ page.url}}&title={{ page.title }}"  title="Share on Reddit" target="_blank"><i class="icon icon-social-reddit medium-icon"></i></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url}}&title={{ page.title }}"  title="Share on LinkedIn" target="_blank"><i class="icon icon-social-linkedin medium-icon"></i></a>
+<a href="mailto:?subject={{ page.title }}&body=Hey! Please check this article out. It may be interesting for you. {{ site.url }}{{ page.url}}"  title="Share by e-mail" target="_blank"><i class="icon icon-mail medium-icon"></i></a>
+ 
+  {% if page.comments != false and site.disqus_shortname %}<section id="disqus_thread"></section><!-- /#disqus_thread -->{% endif %}
+</article>
+{% if page.comments != false %}{% include disqus.html %}{% endif %}

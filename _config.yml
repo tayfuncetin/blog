@@ -1,0 +1,66 @@
+# Site settings
+title: 'Safa Tayfun Çetin'
+description: 'The world of an engineer!'
+url: 'http://tayfuncetin.pro'
+baseurl: '/'
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'Safa Tayfun Çetin'
+  email: tayfun@tayfuncetin.pro
+  twitter_username: 
+  facebook_username: safatayfuncetin
+  github_username:  
+  linkedin_username:  tayfuncetin
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+############
+# Timeline #
+############
+
+events:
+  - date: "Feb 2016  - Nov 2016"
+    gorev: "Production Engineer"
+    description: "Kremsmüller Endüstri Sistemleri"
+  - date: "Nov 2015 - Jan 2016"
+    gorev: "Mechanical System Designer"
+    description: "Yektamak Engineering & Machinery"
+  - date: "May 2012 - Sep 2014"
+    gorev: "Draftsman (Part-time)"
+    description: "Sakarya Demir & Metal"
+  - date: "Sep 2013 - Jul 2014"
+    gorev: "Erasmus Exchange"
+    description: "Almeria University - Spain"
+  - date: "Sep 2011 - Oct 2015"
+    gorev: "Mechanical Engineering"
+    description: "Sakarya University"
+  - date: "Sep 2007 - Jun 2011"
+    gorev: "High School"
+    description: "Arifiye Anatolian High School"
+  - date: "Aug 1993"
+    gorev: "Born"
+    description: "in Sakarya"
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
